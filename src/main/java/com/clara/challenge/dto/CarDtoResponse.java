@@ -5,6 +5,7 @@ public class CarDtoResponse {
 	private Long idChasse;
 	private String name, color, fabricationYear;
 	private String brand;
+	
 	public Long getIdChasse() {
 		return idChasse;
 	}
