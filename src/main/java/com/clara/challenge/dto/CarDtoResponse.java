@@ -6,6 +6,16 @@ public class CarDtoResponse {
 	private String name, color, fabricationYear;
 	private String brand;
 	
+	
+	
+	public CarDtoResponse(Long idChasse, String name, String color, String fabricationYear, String brand) {
+		this.idChasse = idChasse;
+		this.name = name;
+		this.color = color;
+		this.fabricationYear = fabricationYear;
+		this.brand = brand;
+	}
+	
 	public Long getIdChasse() {
 		return idChasse;
 	}
