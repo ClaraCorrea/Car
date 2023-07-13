@@ -28,7 +28,7 @@ public class CarService {
 	public CarDtoResponse getById(Long id) {
 		Car car =  carRepository.findById(id).orElseThrow();
 		
-		CarDtoResponse carDtoResponse = new CarDtoResponse(car.getIdChasse(), car.getName(), car.getBrand(), car.getColor(), car.getFabricationYear())
+		CarDtoResponse carDtoResponse = new CarDtoResponse(car.getIdChasse(), car.getName(), car.getBrand(), car.getColor(), car.getFabricationYear());
 		return carDtoResponse;
 	}
 }
