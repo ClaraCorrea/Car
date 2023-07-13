@@ -17,13 +17,15 @@ public class Car {
 	
 	@NotBlank(message = "o campo é obrigatório!")
 	private String brand;
+	
+	public Car(){}
 
-/*	public Car(String name, String color, String fabricationYear, String brand) {
+	public Car(String name, String color, String fabricationYear, String brand) {
 		this.name = name;
 		this.color = color;
 		this.fabricationYear = fabricationYear;
 		this.brand = brand;
-	}*/
+	}
 	
 	
 	public Long getIdChasse() {
