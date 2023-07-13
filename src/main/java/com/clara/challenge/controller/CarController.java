@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.clara.challenge.dto.CarDtoRequest;
-import com.clara.challenge.entity.Car;
+import com.clara.challenge.dto.CarDtoResponse;
 import com.clara.challenge.service.CarService;
 
 @RestController
@@ -14,18 +14,14 @@ public class CarController {
 	@Autowired
 	CarService carService;
 	
-	@GetMapping("/get")
-	public String get() {
-		return carService.getString();
-	}
-	
 	@PostMapping("/post")
-	public Car post(@RequestBody CarDtoRequest carDto) {
-		return carService.save(carDto);
+	public String post(@RequestBody CarDtoRequest carDto) {
+		carService.save(carDto);
+		return "Carro salvo no banco de dados!";
 	}
 	
-	@GetMapping("/get2/{id}")
-	public Car get2(@PathVariable Long id) {
+	@GetMapping("/get/{id}")
+	public CarDtoResponse get2(@PathVariable Long id) {
 		return carService.getById(id);
 	}
 
