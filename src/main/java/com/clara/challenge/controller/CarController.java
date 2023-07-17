@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import com.clara.challenge.dto.CarDtoRequest;
 import com.clara.challenge.dto.CarDtoResponse;
 import com.clara.challenge.exception.BrandErrorException;
-import com.clara.challenge.exception.ErrorBrand;
+import com.clara.challenge.exception.NullErrorException;
 import com.clara.challenge.service.CarService;
 
 @RestController
@@ -17,14 +17,8 @@ public class CarController {
 	CarService carService;
 	
 	@PostMapping("/post")
-	public String post(@RequestBody CarDtoRequest carDto) {
+	public String post(@RequestBody CarDtoRequest carDto) throws BrandErrorException, NullErrorException {
 		carService.save(carDto);
-		return "Carro salvo no banco de dados!";
-	}
-	
-	@PostMapping("/post2")
-	public String post2(@RequestBody CarDtoRequest carDto) throws BrandErrorException, ErrorBrand {
-		carService.save3(carDto);
 		if(carService.progress == true) {			
 			return "Saved";
 		} else {

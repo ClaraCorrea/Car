@@ -1,10 +1,11 @@
 package com.clara.challenge.dto;
 
+import javax.validation.constraints.NotBlank;
+
 public class CarDtoRequest {
 	
-	private String name, color, fabricationYear;
-
-	private String brand;
+	@NotBlank
+	private String name, color, fabricationYear, brand;
 
 	public String getName() {
 		return name;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class BrandErrorException extends Exception {
 
 	public String BrandErrorException(String msg){
-		return "Unsaved";
+		return "Unsaved! Brand aren't aceptable";
 	}
 	
 

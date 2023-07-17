@@ -1,7 +1,6 @@
 package com.clara.challenge.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
 
 @Entity
@@ -10,12 +9,10 @@ public class Car {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idChasse;
+	private Long idChassi;
 	
-	@NotBlank(message = "o campo é obrigatório!")
 	private String name, color, fabricationYear;
 	
-	@NotBlank(message = "o campo é obrigatório!")
 	private String brand;
 	
 	public Car(){}
@@ -28,12 +25,12 @@ public class Car {
 	}
 	
 	
-	public Long getIdChasse() {
-		return idChasse;
+	public Long getIdChassi() {
+		return idChassi;
 	}
 
-	public void setIdChasse(Long idChasse) {
-		this.idChasse = idChasse;
+	public void setIdChassi(Long idChassi) {
+		this.idChassi = idChassi;
 	}
 
 	public String getName() {
@@ -67,4 +64,5 @@ public class Car {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}	
+
 }
