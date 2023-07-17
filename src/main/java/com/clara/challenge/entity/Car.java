@@ -11,9 +11,7 @@ public class Car {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idChassi;
 	
-	private String name, color, fabricationYear;
-	
-	private String brand;
+	private String name, color, fabricationYear, brand;
 	
 	public Car(){}
 
