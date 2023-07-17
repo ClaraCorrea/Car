@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import com.clara.challenge.dto.CarDtoRequest;
 import com.clara.challenge.dto.CarDtoResponse;
 import com.clara.challenge.exception.BrandErrorException;
+import com.clara.challenge.exception.GetErrorException;
 import com.clara.challenge.exception.NullErrorException;
 import com.clara.challenge.service.CarService;
 
@@ -27,7 +28,7 @@ public class CarController {
 	}
 	
 	@GetMapping("/get/{id}")
-	public CarDtoResponse get2(@PathVariable Long id) throws BrandErrorException {
+	public CarDtoResponse get2(@PathVariable Long id) throws GetErrorException {
 		return carService.getById(id);
 	}
 

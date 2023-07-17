@@ -2,25 +2,25 @@ package com.clara.challenge.dto;
 
 public class CarDtoResponse {
 	
-	private Long idChasse;
+	private Long idChassi;
 	private String name, color, fabricationYear;
 	private String brand;
 	
 	
 	
-	public CarDtoResponse(Long idChasse, String name, String brand, String color, String fabricationYear) {
-		this.idChasse = idChasse;
+	public CarDtoResponse(Long idChassi, String name, String brand, String color, String fabricationYear) {
+		this.idChassi = idChassi;
 		this.name = name;
 		this.color = color;
 		this.fabricationYear = fabricationYear;
 		this.brand = brand;
 	}
 	
-	public Long getIdChasse() {
-		return idChasse;
+	public Long getIdChassi() {
+		return idChassi;
 	}
-	public void setIdChasse(Long idChasse) {
-		this.idChasse = idChasse;
+	public void setIdChassi(Long idChassi) {
+		this.idChassi = idChassi;
 	}
 	public String getName() {
 		return name;
